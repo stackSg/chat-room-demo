@@ -1,7 +1,7 @@
 package com.example.chatroomdemo.domain;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ChatRoom {
     private String roomId;
@@ -9,7 +9,7 @@ public class ChatRoom {
 
     public ChatRoom(String roomId) {
         this.roomId = roomId;
-        this.members = new ArrayList<>();
+        this.members = new CopyOnWriteArrayList<>();
     }
 
     public void join(String userId) {

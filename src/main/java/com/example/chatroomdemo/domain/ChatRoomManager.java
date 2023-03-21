@@ -2,16 +2,16 @@ package com.example.chatroomdemo.domain;
 
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 public class ChatRoomManager {
     private Map<String, ChatRoom> chatRooms;
 
     public ChatRoomManager() {
-        this.chatRooms = new HashMap<>();
+        this.chatRooms = new ConcurrentHashMap<>();
     }
 
     public void joinRoom(String roomId, String userId) {
